@@ -5,14 +5,13 @@
 </head>
 <body>
 <h1>Login page</h1>
-<label th:if="@{loginError}">Username or Password is wrong</label>
+<label th:if="${loginError}">Username or Password is wrong</label>
 <form th:action="@{/login}" method="post">
     <label for="username">Username</label>:
     <input type="text" id="username" name="username" autofocus="autofocus"/> <br/>
     <label for="password">Password</label>:
     <input type="password" id="password" name="password"/> <br/>
     <input type="submit" value="Log in"/>
-
 
 
 </form>
